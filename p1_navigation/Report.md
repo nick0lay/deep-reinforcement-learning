@@ -6,7 +6,8 @@ Deep Q-Learning Algorithm (DQN) was used to solve navigation problem.
 Implementation consist of:
  - dqn_agent.py - agent implementation
  - model.py - neural network implementation
- - replay_buffer.py - 
+ - replay_buffer.py - agent reply buffer
+ - train.py - script to train model
 
 ### Algorithm Performance
 ![Algorithm Performance](/images/algorithm_performance.png "Algorithm Performance")
