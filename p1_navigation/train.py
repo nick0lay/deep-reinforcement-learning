@@ -51,7 +51,6 @@ def train(n_episodes=2000, eps_start=1.0, eps_end=0.05, eps_decay=0.99):
     Params
     ======
         n_episodes (int): maximum number of training episodes
-        max_t (int): maximum number of timesteps per episode
         eps_start (float): starting value of epsilon, for epsilon-greedy action selection
         eps_end (float): minimum value of epsilon
         eps_decay (float): multiplicative factor (per episode) for decreasing epsilon
