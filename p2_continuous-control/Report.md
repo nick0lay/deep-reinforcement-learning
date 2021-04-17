@@ -52,7 +52,7 @@ Selected parameters:
 ### Algorithm Performance
 ![Algorithm Performance][img_algorithm_performance]
 
-Environment was solved in 135 episodes with average score 30.06.
+Environment was solved in 235 episodes with average score 30.06.
 ```
 Episode 100	Average Score: 9.23
 Episode 200	Average Score: 24.88
