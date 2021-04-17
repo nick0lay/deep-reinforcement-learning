@@ -12,7 +12,7 @@ The observation space consists of 33 variables corresponding to position, rotati
 ## Learning Algorithm
 
 Implementation consist of:
- - dqn_agent.py - agent implementation
+ - ddpg_agent.py - agent implementation
  - model.py - neural network implementation
 
 Agent parameters:
