@@ -73,6 +73,7 @@ Then, place the file in the `p3_collab-compet/` folder in the DRLND GitHub repos
 ### Configure virtual environment
 
 Create and switch to virtual environment
+
 `conda create -n collab_compet python=3.8` - create virtual environment `collab_compet`
 `conda activate collab_compet` - activate virtual environment `collab_compet`
 `conda deactivate` - deactivate virtual environment
