@@ -12,7 +12,7 @@ def hidden_init(layer):
 class Actor(nn.Module):
     """Actor (Policy) Model."""
 
-    def __init__(self, state_size, action_size, seed, fc1_units=256, fc2_units=128, use_batch_norm=False, use_dropout = False):
+    def __init__(self, state_size, action_size, seed, fc1_units=256, fc2_units=128, use_batch_norm=True, use_dropout = False):
         """Initialize parameters and build model.
         Params
         ======
@@ -21,6 +21,8 @@ class Actor(nn.Module):
             seed (int): Random seed
             fc1_units (int): Number of nodes in first hidden layer
             fc2_units (int): Number of nodes in second hidden layer
+            use_batch_norm: Flag to enable or disable batch normalisation
+            use_dropout: Flag to enable or disable dropout
         """
         super(Actor, self).__init__()
         self.seed = torch.manual_seed(seed)
@@ -61,7 +63,7 @@ class Actor(nn.Module):
 class Critic(nn.Module):
     """Critic (Value) Model."""
 
-    def __init__(self, state_size, action_size, seed, fcs1_units=256, fc2_units=128, use_batch_norm=False, use_dropout = False):
+    def __init__(self, state_size, action_size, seed, fcs1_units=256, fc2_units=128, use_batch_norm=True, use_dropout = False):
         """Initialize parameters and build model.
         Params
         ======
@@ -70,6 +72,8 @@ class Critic(nn.Module):
             seed (int): Random seed
             fcs1_units (int): Number of nodes in the first hidden layer
             fc2_units (int): Number of nodes in the second hidden layer
+            use_batch_norm: Flag to enable or disable batch normalisation
+            use_dropout: Flag to enable or disable dropout
         """
         super(Critic, self).__init__()
         self.seed = torch.manual_seed(seed)
@@ -80,7 +84,6 @@ class Critic(nn.Module):
         
         self.use_batch_norm = use_batch_norm
         self.batch_norm1 = nn.BatchNorm1d(fcs1_units)
-        self.batch_norm2 = nn.BatchNorm1d(fc2_units)
         
         self.use_dropout = use_dropout
         self.dropout = nn.Dropout(0.2)
@@ -102,6 +105,4 @@ class Critic(nn.Module):
         x = torch.cat((x, action), dim=1)
         x = self.fc2(x)
         x = F.relu(x)
-        if self.use_batch_norm:
-            x = self.batch_norm2(x)
         return self.fc3(x)

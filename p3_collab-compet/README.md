@@ -39,7 +39,16 @@ The environment is considered solved, when the average (over 100 episodes) of th
 
 ### Instructions
 
-Follow the instructions in `Tennis.ipynb` to get started with training your own agent!  
+Solution consists from two notebooks:
+ - `Tennis.ipynb`
+ - `Tennis-MADDPG.ipynb`
+ 
+First solution implemented with single DDPG agent which use same critic and local networks for both environment agents.
+
+Second solution implemented with MADDPG agent which use two DDPG agents under the hood. Each DDPG agent has it's own local network and buffer but critic network shared bitween
+both agents. Agent local networks trained from own agent buffer but critic network trained from two buffers.
+
+Follow the instructions in `Tennis.ipynb` and `Tennis-MADDPG.ipynb` to get started with training your own agent!
 
 ### (Optional) Challenge: Crawler Environment
 
@@ -60,3 +69,20 @@ You need only select the environment that matches your operating system:
 Then, place the file in the `p3_collab-compet/` folder in the DRLND GitHub repository, and unzip (or decompress) the file.  Next, open `Soccer.ipynb` and follow the instructions to learn how to use the Python API to control the agent.
 
 (_For AWS_) If you'd like to train the agents on AWS (and have not [enabled a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md)), then please use [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Soccer/Soccer_Linux_NoVis.zip) to obtain the "headless" version of the environment.  You will **not** be able to watch the agents without enabling a virtual screen, but you will be able to train the agents.  (_To watch the agents, you should follow the instructions to [enable a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md), and then download the environment for the **Linux** operating system above._)
+
+### Configure virtual environment
+
+Create and switch to virtual environment
+`conda create -n collab_compet python=3.8` - create virtual environment `collab_compet`
+`conda activate collab_compet` - activate virtual environment `collab_compet`
+`conda deactivate` - deactivate virtual environment
+
+Install ml-agents, from `python` folder of this repository
+`pip -q install ../python`
+
+To work with `Tennis.ipynb` make sure that path to Unity environment correct and match environment for your operation system.
+Create custom kernel to work with notebook.
+`conda install ipykernel`
+`ipython kernel install --user --name=collab_compet` - install custom kernel with `collab_compet` name
+
+After kernel installed make sure that it was selected before run notebook.
