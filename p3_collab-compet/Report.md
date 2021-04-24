@@ -1,5 +1,5 @@
-[img_maddpg_performance]: img/maddpg_performance.png
-[img_ddpg_performance]: img/ddpg_performance.png
+[img_maddpg_performance]: img/img_maddpg_performance.png
+[img_ddpg_performance]: img/img_ddpg_performance.png
 
 # Report
 
