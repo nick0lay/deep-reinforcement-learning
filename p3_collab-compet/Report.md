@@ -1,4 +1,5 @@
-[img_algorithm_performance]: images/algorithm_performance.png
+[img_maddpg_performance]: images/maddpg_performance.png
+[img_ddpg_performance]: images/ddpg_performance.png
 
 # Report
 
@@ -119,25 +120,29 @@ Selected parameters:
 
 ### Algorithm Performance
 #### DDPG agent
-![Algorithm Performance][img_algorithm_performance]
+![Algorithm Performance][img_maddpg_performance]
 
-Environment was solved in 235 episodes with average score 30.06.
+Environment was solved in 392 episodes with average score 0.5.
 ```
-Episode 100	Average Score: 9.23
-Episode 200	Average Score: 24.88
-Episode 235	Average Score: 30.06
-Environment solved in 135 episodes!	Average Score: 30.06
+Episode 31	Average Score: 0.01
+Episode 100	Average Score: 0.04
+Episode 200	Average Score: 0.08
+Episode 300	Average Score: 0.12
+Episode 392	Average Score: 0.50
+Environment solved in 292 episodes!	Average Score: 0.50
 ```
 
 #### MADDPG agent
-![Algorithm Performance][img_algorithm_performance]
+![Algorithm Performance][img_maddpg_performance]
 
-Environment was solved in 235 episodes with average score 30.06.
+Environment was solved in 392 episodes with average score 0.5.
 ```
-Episode 100	Average Score: 9.23
-Episode 200	Average Score: 24.88
-Episode 235	Average Score: 30.06
-Environment solved in 135 episodes!	Average Score: 30.06
+Episode 31	Average Score: 0.01
+Episode 100	Average Score: 0.04
+Episode 200	Average Score: 0.08
+Episode 300	Average Score: 0.12
+Episode 392	Average Score: 0.50
+Environment solved in 292 episodes!	Average Score: 0.50
 ```
 
 ### Noise algorithm improvements
