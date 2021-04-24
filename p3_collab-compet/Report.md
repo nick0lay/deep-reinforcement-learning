@@ -130,7 +130,7 @@ Episode 200	Average Score: 0.08
 Episode 300	Average Score: 0.13
 Episode 400	Average Score: 0.48
 Episode 404	Average Score: 0.50
-Environment solved in 304 episodes!	Average Score: 0.50
+Environment solved in 404 episodes!	Average Score: 0.50
 ```
 
 #### MADDPG agent
@@ -143,7 +143,7 @@ Episode 100	Average Score: 0.04
 Episode 200	Average Score: 0.08
 Episode 300	Average Score: 0.12
 Episode 392	Average Score: 0.50
-Environment solved in 292 episodes!	Average Score: 0.50
+Environment solved in 392 episodes!	Average Score: 0.50
 ```
 
 ### Noise algorithm improvements
