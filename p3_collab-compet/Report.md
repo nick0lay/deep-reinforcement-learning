@@ -1,5 +1,5 @@
-[img_maddpg_performance]: images/maddpg_performance.png
-[img_ddpg_performance]: images/ddpg_performance.png
+[img_maddpg_performance]: img/maddpg_performance.png
+[img_ddpg_performance]: img/ddpg_performance.png
 
 # Report
 
@@ -120,16 +120,17 @@ Selected parameters:
 
 ### Algorithm Performance
 #### DDPG agent
-![Algorithm Performance][img_maddpg_performance]
+![Algorithm Performance][img_ddpg_performance]
 
-Environment was solved in 392 episodes with average score 0.5.
+Environment was solved in 404 episodes with average score 0.5.
 ```
-Episode 31	Average Score: 0.01
-Episode 100	Average Score: 0.04
+Episode 17	Average Score: 0.00
+Episode 100	Average Score: 0.03
 Episode 200	Average Score: 0.08
-Episode 300	Average Score: 0.12
-Episode 392	Average Score: 0.50
-Environment solved in 292 episodes!	Average Score: 0.50
+Episode 300	Average Score: 0.13
+Episode 400	Average Score: 0.48
+Episode 404	Average Score: 0.50
+Environment solved in 304 episodes!	Average Score: 0.50
 ```
 
 #### MADDPG agent
